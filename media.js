@@ -9,15 +9,4 @@ const returnMedia = array => {
 
 const numbers = [10,2,3,4,5]
 
-console.log(returnMedia(numbers))
-const returnMaior = array => {
-    let maior = array[0]
-    for (let i = 1; i < array.length; i++) {
-        if (array[i] > maior) {
-            maior = array[i]
-        }
-    }
-    return maior
-}
 
-console.log(returnMaior(numbers))
