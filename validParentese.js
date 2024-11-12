@@ -1,12 +1,14 @@
 const isValid = s => {
     const stack = []
+    const opened = (char) =>char === '(' || char === '[' || char === '{'
+    const closed = (char, last) => char === ')' && last !== '(' || char === ']' && last !== '[' || char === '}' && last !== '{'
     for (let i = 0; i < s.length; i++) {
         const char = s[i]
-        if (char === '(' || char === '[' || char === '{') {
+        if (opened(char)) {
             stack.push(char)
         } else {
             const last = stack.pop()
-            if (char === ')' && last !== '(' || char === ']' && last !== '[' || char === '}' && last !== '{') {
+            if (closed(char, last)) {
                 return false
             }
         }
