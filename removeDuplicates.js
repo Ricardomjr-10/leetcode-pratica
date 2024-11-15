@@ -1,10 +1,11 @@
 const removeDuplicates = nums => {
-// let array = []
-// for (let i = 0; i < nums.length; i++) {
-//     if (!array.includes(nums[i])) {
-//         array.push(nums[i])
-//     }
-// }
+let array = []
+for (let i = 0; i < nums.length; i++) {
+    if (!array.includes(nums[i])) {
+        array.push(nums[i])
+    }
+}
+return array
 }
 
 const nums = [1,1,2]
